@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+</head>
+<body>
+{%include "Vibor.html"%}
+<div class="container" style="margin: 10px">
+    <div class="row">
+        <div class="col-xl-6 col-lg-6">
+            <div class="card l-bg-cherry">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="mb-4">
+                        <h1 class="card-title mb-0">Баланс смарт-контракта</h1>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h2 name="Smart_bal" class="d-flex align-items-center mb-0">
+                                {{Smart_bal}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="card l-bg-orange-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="mb-4">
+                        <h1  class="card-title mb-0">Баланс аккаунта</h1>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h2 name="Acc_balnce" class="d-flex align-items-center mb-0">
+                                {{Acc_balnce}}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="bg-light p-5 rounded mt-3">
+        <h1>Перевести эфир на смарт-контракт</h1>
+        <p class="lead">Для того, что бы перевести эфир на смарт контракт введите количество эфира</p>
+          <form method="post" class="d-flex">
+            <input name="colSen-vo" class="form-control me-2" type="number" placeholder="Кол-во эфира" aria-label="Search">
+            <button name="send_btn" class="btn btn-outline-success" type="submit">Отправить</button>
+          </form>
+      </div>
+    <div class="bg-light p-5 rounded mt-3">
+        <h1>Снять эфир с контракта</h1>
+        <p class="lead">Для того, что бы снять эфир введите количество эфира</p>
+          <form method="post" class="d-flex">
+            <input name="colWith-vo" class="form-control me-2" type="number" placeholder="Кол-во эфира" aria-label="Search">
+            <button name="withDraw" class="btn btn-outline-success" type="submit">Снять</button>
+          </form>
+      </div>
+</body>
+</html>

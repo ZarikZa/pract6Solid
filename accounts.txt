@@ -1,0 +1,11 @@
+0x2bf06fc7ED820dE43a395230BE939C860917b4D0 123
+
+0xc94a04cd776D017cE6015B09C2164C84E271EeCc 123
+
+
+geth account new --datadir data - создание нового аккаунта
+geth init --datadir data genesis.json - создание генезис блока
+
+geth --datadir data --networkid 220320241433 --unlock 0x2bf06fc7ED820dE43a395230BE939C860917b4D0 --allow-insecure-unlock --http --http.corsdomain="*" --http.api web3,eth,debug,personal,net,miner --miner.etherbase 0x2bf06fc7ED820dE43a395230BE939C860917b4D0
+geth attach --datadir data ipc:\\.\pipe\geth.ipc - создание отдельной консоли geth для того, чтобы управлять процессами в блокчейне
+    eth.blockNumber - номер блока
